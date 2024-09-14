@@ -8,7 +8,7 @@ function Authentication({ children }) {
   let [auth, setAuth] = useState({ token: null, isLoggedIn: false });
   let navigate = useNavigate();
 
-  let Login = (token, expiry) => {
+  let login = (token, expiry) => {
     localStorage.setItem("token", token);
     localStorage.setItem("tokenExpiry", expiry);
     setAuth({ token, isLoggedIn: true });
@@ -42,7 +42,7 @@ function Authentication({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{auth,logout,Login}}>
+    <AuthContext.Provider value={{auth,logout,login}}>
       {children}
     </AuthContext.Provider>
   );

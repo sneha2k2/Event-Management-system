@@ -77,21 +77,6 @@ function Signup() {
               if (type === "radio") {
                 return (
                   <Fragment key={id}>
-                    <div className="gender">
-                      <label>Gender</label>
-                      {options.map((option) => (
-                        <label key={option.value}>
-                          <input
-                            type="radio"
-                            name={name}
-                            value={option.value}
-                            checked={signupData[name] === option.value}
-                            onChange={getData}
-                          />
-                          {option.label}
-                        </label>
-                      ))}
-                    </div>
                     <div>
                       {formErrors[name] && (
                         <small
@@ -123,7 +108,7 @@ function Signup() {
               Register
             </button>
           </form>
-          <a href="./login">Already have a account?</a>
+          <a href="./Login">Already have a account?</a>
         </div>
       </section>
     );

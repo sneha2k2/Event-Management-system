@@ -5,6 +5,7 @@ import { MdDelete, MdEdit } from "react-icons/md";
 import { BiSortAlt2 } from "react-icons/bi";
 import { FaFilter } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
+import '../CSS/events.css'
 
 
 function Events() {
